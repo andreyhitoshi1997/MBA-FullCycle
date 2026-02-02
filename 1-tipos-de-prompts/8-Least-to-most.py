@@ -1,5 +1,5 @@
-from langchain_openai import ChatOpenAI
-from langchain.prompts import ChatPromptTemplate
+from langchain_xai import ChatXAI
+from langchain_core.prompts import ChatPromptTemplate
 from utils import print_llm_result
 from dotenv import load_dotenv
 load_dotenv()
@@ -30,6 +30,6 @@ Output format:
 
 """
 
-model = ChatOpenAI(model="gpt-5-mini")
+model = ChatXAI(model="grok-3")
 result = model.invoke(msg)
 print_llm_result(msg, result)
